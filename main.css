@@ -1,0 +1,21 @@
+.dark-blocks
+{
+	color:red;
+	border:2px solid #ddd;
+	width:80px;
+	height:80px;
+	margin:1px 1px 1px 1px;
+	float:left;
+	/*background-color:#778899;*/
+	background-color:#808080;
+}
+.bright-blocks
+{
+	color:red;
+	border:2px solid #ddd;
+	width:80px;
+	height:80px;
+	margin:1px 1px 1px 1px;
+	float:left;
+	
+}
