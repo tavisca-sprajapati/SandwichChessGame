@@ -12,14 +12,20 @@
       <link href="main.css" rel="stylesheet">
       <link href="sMain.css" rel="stylesheet">
 
+      <script src="test.js"></script>
       <script src="sChess.js"></script>
 	  <script src="kChess.js"></script>
 	  <script src="pChess.js"></script>
       <script src="tChess.js"></script>
+      <script src="chess2.js"></script>
 
 
 </head>
-<body onload="setBoard()">
+<body onload="makeBoard()">
+	<div id="bArea"  style="display:block;float:left;width:5%;">
+	</div>
+	<div id="wArea" style="display:block;float:left;width:5%;">
+	</div>
 	<center>
 <div style="width:680px;height:680px;border:2px solid red;">
 	<div style="float:right;">
@@ -33,7 +39,7 @@
 		abc
 	</div>
 	<div id="03" class="bright-blocks">
-		xyz
+		abc
 	</div>
 	<div id="04" class="dark-blocks">
 		abc
@@ -50,11 +56,11 @@
 </div>
 <div style="float:right;">
 
-	<div id="10" class="bright-blocks" onclick="play(this)" style="cursor:pointer;">
-		<img src="images/bP.png">
+	<div id="10" class="bright-blocks">
+	abc
 	</div>
-	<div id="11" class="dark-blocks" onclick="play(this)" style="cursor:pointer;">
-		<img src="images/wP.png">
+	<div id="11" class="dark-blocks">
+		
 	</div>
 	<div id="12" class="bright-blocks">
 		xyz
@@ -69,7 +75,7 @@
 		abc
 	</div>
 	<div id="16" class="bright-blocks">
-		xyz
+		abc
 	</div>
 	<div id="17" class="dark-blocks">
 		abc
@@ -114,7 +120,7 @@
 	<div id="32" class="bright-blocks">
 		xyz
 	</div>
-	<div id="33" class="dark-blocks">
+	<div id="33" class="dark-blocks" >
 		abc
 	</div>
 	<div id="34" class="bright-blocks">
@@ -175,7 +181,7 @@
 	<div id="54" class="bright-blocks">
 		xyz
 	</div>
-	<div id="55" class="dark-blocks">
+	<div id="55" class="dark-blocks" >
 		abc
 	</div>
 	<div id="56" class="bright-blocks">
@@ -192,13 +198,13 @@
 		abc
 	</div>
 	<div id="61" class="bright-blocks">
-		xyz
+		abc
 	</div>
 	<div id="62" class="dark-blocks">
 		abc
 	</div>
 	<div id="63" class="bright-blocks">
-		xyz
+		abc
 	</div>
 	<div id="64" class="dark-blocks">
 		abc
@@ -234,7 +240,7 @@
 		abc
 	</div>
 	<div id="76" class="bright-blocks">
-		abck
+		and
 	</div>
 	<div id="77" class="dark-blocks">
 		abc
@@ -246,6 +252,7 @@
 
 </div>
 </center>
+<input type="button" value="replay" onclick="replay1()" style="float:right;"> 
 <script src="https://code.jquery.com/jquery.js"></script>
       <script src="bootstrap/js/bootstrap.min.js"></script>
 </body>
