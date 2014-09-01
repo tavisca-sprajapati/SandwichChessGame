@@ -59,10 +59,273 @@ function cbc(kpos,kcolor)
 
 	var tempID;
 
-	var m=0;
+	
 	var l=0;
+	
+	
+	
+	
+	
+	//code for knight
+	var l=i-2;
+	var m=j-1;
+	if(l>=0)
+		{
+		   if(m>=0)
+			{
+			  tempID=""+l+m;
+			  //alert(tempID);
+							if(!IsEmpty(tempID))
+			{
+			       var frendCheck=document.getElementById(tempID).getElementsByTagName("img")[0];
+				   //alert("hello");
+				   //alert(frendCheck);
+				   if(frendCheck.src.match(kcolor))
+				   {
+				         alert("matched");
+						 
+				   }
+				   else
+				   {
+				        var obj=document.getElementById(tempID);
+			            var x=obj.getElementsByTagName("img")[0];
+						if(x)
+						{
+							piece=x.getAttribute("src");
+							piece=piece.charAt(8);
+							if(piece=="N")
+							{
+							  alert("checkmate");
+							  
+							}
+						}	
 
-	/*code of rook*/
+					}	
+
+			    }
+
+			}
+			m=j+1;
+			if(m<=7)
+			{
+			    tempID=""+l+m;
+			  //alert(tempID);
+			  
+			  
+			  
+			  
+			  
+			 if(!IsEmpty(tempID))
+			{
+			       var frendCheck=document.getElementById(tempID).getElementsByTagName("img")[0];
+				   //alert("hello");
+				   //alert(frendCheck);
+				   if(frendCheck.src.match(kcolor))
+				   {
+				        alert("matched");
+						// break;
+				   }
+				   else
+				   {
+				        var obj=document.getElementById(tempID);
+			            var x=obj.getElementsByTagName("img")[0];
+						if(x)
+						{
+							piece=x.getAttribute("src");
+							piece=piece.charAt(8);
+							if(piece=="N")
+							{
+							  alert("checkmate");
+							  
+							}
+						}	
+
+					}	
+
+			}
+			    			  
+				
+			}
+	
+		
+		}
+		l=i+2;
+		m=j-1;
+		//alert(l)
+		if(l<=7)
+		{
+		   if(m>=0)
+			{
+			tempID=""+l+m;
+			  //alert(tempID);
+			  
+			  
+			  
+			  
+			  
+			 if(!IsEmpty(tempID))
+			{
+			       var frendCheck=document.getElementById(tempID).getElementsByTagName("img")[0];
+				   //alert("hello");
+				   //alert(frendCheck);
+				   if(frendCheck.src.match(kcolor))
+				   {
+				        alert("matched");
+						// break;
+				   }
+				   else
+				   {
+				        var obj=document.getElementById(tempID);
+			            var x=obj.getElementsByTagName("img")[0];
+						if(x)
+						{
+							piece=x.getAttribute("src");
+							piece=piece.charAt(8);
+							if(piece=="N")
+							{
+							  alert("checkmate");
+							  
+							}
+						}	
+
+					}	
+
+			}
+			    			  
+			  
+
+			}
+			m=j+1;
+			if(m<=7)
+			{
+			   tempID=""+l+m;
+			  //alert(tempID);
+			  
+			  
+			  
+			  
+			  
+			 if(!IsEmpty(tempID))
+			{
+			       var frendCheck=document.getElementById(tempID).getElementsByTagName("img")[0];
+				   //alert("hello");
+				   //alert(frendCheck);
+				   if(frendCheck.src.match(kcolor))
+				   {
+				        alert("matched");
+						// break;
+				   }
+				   else
+				   {
+				        var obj=document.getElementById(tempID);
+			            var x=obj.getElementsByTagName("img")[0];
+						if(x)
+						{
+							piece=x.getAttribute("src");
+							piece=piece.charAt(8);
+							if(piece=="N")
+							{
+							  alert("checkmate");
+							  
+							}
+						}	
+
+					}	
+
+			}
+			    			  
+			}
+	
+		
+		}
+		
+		l=i+2;
+		m=j-1;
+		//alert(l)
+		if(l<=7)
+		{
+		   if(m>=0)
+			{
+			  tempID=""+l+m;
+			  //alert(tempID);
+			  
+			  
+			  
+			  
+			  
+			 if(!IsEmpty(tempID))
+			{
+			       var frendCheck=document.getElementById(tempID).getElementsByTagName("img")[0];
+				   //alert("hello");
+				   //alert(frendCheck);
+				   if(frendCheck.src.match(kcolor))
+				   {
+				        alert("matched");
+						// break;
+				   }
+				   else
+				   {
+				        var obj=document.getElementById(tempID);
+			            var x=obj.getElementsByTagName("img")[0];
+						if(x)
+						{
+							piece=x.getAttribute("src");
+							piece=piece.charAt(8);
+							if(piece=="N")
+							{
+							  alert("checkmate");
+							  
+							}
+						}	
+
+					}	
+
+			}
+			}
+			m=j+1;
+			if(m<=7)
+			{
+					tempID=""+l+m;
+			  //alert(tempID);
+			  
+			  
+			  
+			  
+			  
+			 if(!IsEmpty(tempID))
+			{
+			       var frendCheck=document.getElementById(tempID).getElementsByTagName("img")[0];
+				   //alert("hello");
+				   //alert(frendCheck);
+				   if(frendCheck.src.match(kcolor))
+				   {
+				        alert("matched");
+						// break;
+				   }
+				   else
+				   {
+				        var obj=document.getElementById(tempID);
+			            var x=obj.getElementsByTagName("img")[0];
+						if(x)
+						{
+							piece=x.getAttribute("src");
+							piece=piece.charAt(8);
+							if(piece=="N")
+							{
+							  alert("checkmate");
+							  
+							}
+						}	
+
+					}	
+
+			}
+			}
+	
+		
+		} 
+	
+	
 
 	if(i>0)
 	{	m=j;
@@ -109,7 +372,9 @@ function cbc(kpos,kcolor)
 		m=j;
 		for(l=i+1; l<=7 ; l++)
 		{
-			tempID=""+l+m;
+          tempID=""+l+m;
+			//alert(tempID);
+			
 			if(!IsEmpty(tempID))
 			{
 			       var frendCheck=document.getElementById(tempID).getElementsByTagName("img")[0];
@@ -144,6 +409,89 @@ function cbc(kpos,kcolor)
 
 		}
 	}
+	
+	
+			m=j+2;
+			l=i-1;
+			if(m<=7)
+			{ 
+			   if(l>=0)
+			   {
+
+					tempID=""+l+m;
+			//alert(tempID);
+			
+			if(!IsEmpty(tempID))
+			{
+			       var frendCheck=document.getElementById(tempID).getElementsByTagName("img")[0];
+				   //alert("hello");
+				   //alert(frendCheck);
+				   if(frendCheck.src.match(kcolor))
+				   {
+				        alert("matched");
+						 //break;
+				   }
+				   else
+				   {
+				        var obj=document.getElementById(tempID);
+			            var x=obj.getElementsByTagName("img")[0];
+						if(x)
+						{
+							piece=x.getAttribute("src");
+							piece=piece.charAt(8);
+							if(piece=="N")
+							{
+							  alert("checkmate");
+							  
+							}
+						}	
+
+					}	
+
+			}
+
+			   
+			   }
+			   
+			   l=i+1;
+			   if(l<=7)
+			   {
+			   tempID=""+l+m;
+			//alert(tempID);
+			
+			if(!IsEmpty(tempID))
+			{
+			       var frendCheck=document.getElementById(tempID).getElementsByTagName("img")[0];
+				   //alert("hello");
+				   //alert(frendCheck);
+				   if(frendCheck.src.match(kcolor))
+				   {
+				         alert("matched");
+						 //break;
+				   }
+				   else
+				   {
+				        var obj=document.getElementById(tempID);
+			            var x=obj.getElementsByTagName("img")[0];
+						if(x)
+						{
+							piece=x.getAttribute("src");
+							piece=piece.charAt(8);
+							if(piece=="N")
+							{
+							  alert("checkmate");
+							  
+							}
+						}	
+
+					}	
+
+			}
+
+				
+			   }
+			
+			}
 	
 	
 	for(l=i-1,m=j+1 ; l>=0 && m<=7 ; l--,m++)
@@ -245,6 +593,7 @@ function cbc(kpos,kcolor)
 			}
 	}
 
+	
 	for(l=i+1,m=j+1; l<=7 && m<=7; l++,m++)
 	{
 	     tempID=""+l+m;
