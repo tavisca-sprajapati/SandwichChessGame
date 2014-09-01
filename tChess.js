@@ -1,5 +1,4 @@
 
-var arr = ["10-30","11-31","12-32","60-40","61-41","62-42"];
 
 var replay = function(i) {
   // var s = document.getElementById("div1"); //you could pass this element as a parameter as well
@@ -40,3 +39,8 @@ function replay1()
    replay();
 }
 
+function resetme()
+{
+   
+   window.location.reload();
+}

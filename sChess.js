@@ -2,6 +2,10 @@ var howIsNext;
 var Mypiece="";
 var validateMove="m";
 var pieceColor="";
+var pieceType="";
+var arr1=[];
+//arr1.push("abc");
+var movesStored="";
 function IsEmpty(divid)
 {
 	//alert("true");
@@ -43,7 +47,11 @@ function setBoardAgain()
 	}
 }
 
-
+function clearIt()
+{
+	alert("cl");
+	localStorage.removeItem("lastname");
+}
 
 
 
@@ -51,12 +59,15 @@ function play(obj)
 {
 	//alert("play");
 	setBoardAgain();
+	localStorage.setItem("lastname", "Smith");
+	//alert(arr1);
+	//testing2();
 
 	var childImage=obj.getElementsByTagName("img")[0];
 	if(childImage)
 	{
 		Mypiece=obj.id;
-		var str="";
+		
 		
 		if (childImage.src.match("b"))
 		{
@@ -72,30 +83,30 @@ function play(obj)
 
     	if(pieceColor!=validateMove || validateMove=="m")
     	{
-		str=childImage.getAttribute("src");
-        	var str=str.charAt(8);
-        	if(str=="B")
+		pieceType=childImage.getAttribute("src");
+        	var pieceType=pieceType.charAt(8);
+        	if(pieceType=="B")
         	{
         		playBishop(obj,pieceColor);
         		
         	}
-        	if(str=="P")
+        	if(pieceType=="P")
         	{
         		playPawn(obj,pieceColor);
         	}
-        	if(str=="R")
+        	if(pieceType=="R")
         	{
         		playRook(obj,pieceColor);
         	}
-			if(str=="Q")
+			if(pieceType=="Q")
 			{
 				playQuen(obj,pieceColor);
 			}
-			if(str=="K")
+			if(pieceType=="K")
 			{
 				playKing(obj,pieceColor);
 			}
-			if(str=="N")
+			if(pieceType=="N")
 			{
 				playKnight(obj,pieceColor);
 				
@@ -105,7 +116,7 @@ function play(obj)
 		}
 		else 
 		{
-			alert("not yr move");
+			alert("Your Opponent's Turn..");
 		}
         
     }
@@ -122,13 +133,19 @@ function movePiece(obj)
 	//alert(Mypiece+" "+obj.id);
 	//var myContent=
 
-	setBoardAgain();
-	
+		setBoardAgain();
+		arr1.push(Mypiece+"-"+obj.id);
+		if(!IsEmpty(obj.id))
+		{
+		DashBoard(obj);
+		}
 		document.getElementById(obj.id).innerHTML=document.getElementById(Mypiece).innerHTML;
 		document.getElementById(Mypiece).innerHTML="";
 		obj.setAttribute("onclick","play(this)");
 		obj.setAttribute("style","cursor:pointer;");
 		validateMove=pieceColor;
+		
+
 }
 
 function setHighLight(divid)
@@ -150,6 +167,26 @@ function IsFriend(pieceColor,divid)
 		
 }
 
+
+function DashBoard(obj)
+{
+	//alert("hello");
+	var strimages=obj.getElementsByTagName("img")[0].getAttribute("src");
+	if(strimages.charAt(8)=="K")
+		{
+			alert("Game Over");
+			window.location.reload();
+		}
+	strimages="<img src='"+strimages+"' width:10px height:10px;>";
+			
+		if(pieceColor=="b")
+		{
+			document.getElementById("wArea").innerHTML+=strimages;
+		}
+		else
+			document.getElementById("bArea").innerHTML+=strimages;
+	//alert(strimages);
+}
 
 function playKnight(obj,pieceColor)
 {
@@ -789,7 +826,7 @@ function playPawn(obj,pieceColor)
 			}
 
 		}
-		if(j!==0 && i>7)
+		if(j!==0 && i<7)
 		{   
 			l=i+1;
 			m=j-1;
@@ -799,7 +836,7 @@ function playPawn(obj,pieceColor)
 				IsFriend(pieceColor,tempID);
 			}
 		}
-		if(j!=7 && i>7)
+		if(j!=7 && i<7)
 		{
 			l=i+1;
 			m=j+1;
@@ -866,18 +903,4 @@ function playPawn(obj,pieceColor)
 
 
 	
-}
-
-
-
-function white()
-{
-	var getit=document.getElementById("00");
-	getit.style.backgroundColor = "red";
-}
-
-function black()
-{
-	var getit=document.getElementById("00");
-	getit.style.backgroundColor = "red";
 }
