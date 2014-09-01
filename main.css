@@ -1,21 +1,17 @@
 .dark-blocks
-{	
-	display: block;
-	background: url(images/black.png);
-    background-size: 100%;
+{
+	color:red;
 	border:2px solid #ddd;
 	width:80px;
 	height:80px;
 	margin:1px 1px 1px 1px;
 	float:left;
 	/*background-color:#778899;*/
-	/*background-color:#808080;*/
+	background-color:#808080;
 }
 .bright-blocks
 {
-	display: block;
-	background: url(images/white.png);
-    background-size: 100%;
+	color:red;
 	border:2px solid #ddd;
 	width:80px;
 	height:80px;

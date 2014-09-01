@@ -33,11 +33,7 @@ var wBoardList=[];
 		
 
 		
-<<<<<<< HEAD
-function makeBoard()
-=======
 window.onload=function()
->>>>>>> origin/master
 {
 //dispaly all pawn
 for (i = 1; i < 7 ;)
