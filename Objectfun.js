@@ -1,6 +1,9 @@
 
+
 function playKnight(obj,pieceColor)
 {
+
+
 
     //alert("in night");
 	var i=parseInt(obj.id.charAt(0));
@@ -83,7 +86,7 @@ function playKnight(obj,pieceColor)
 		}
 			m=j+2;
 			l=i-1;
-			if(j<=7)
+			if(m<=7)
 			{ 
 			   if(l>=0)
 			   {
@@ -119,7 +122,7 @@ function playKnight(obj,pieceColor)
 			}
 			m=j-2;
 			l=i-1;
-			if(j>=0)
+			if(m>=0)
 			{
 			   if(l>=0)
 			   {
