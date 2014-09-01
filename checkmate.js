@@ -1,7 +1,9 @@
 function isCheckMate()
 {
-    
+
 	//alert("hi");
+	this.bcheck=false;
+	this.wcheck=false;
 	var bpos="";
 	var wpos="";
 	var piece="";
@@ -24,7 +26,11 @@ function isCheckMate()
 				if(x.src.match("b")&& piece=="K")
 				{
 				  
-				  cbc(tempID,"b");
+				  if(cbc(tempID,"b"))
+				  {
+				   bcheck=true;
+				   alert(bcheck);
+				  }
 				  //bpos=tempID;
 				 //alert(bpos);
 				
@@ -34,7 +40,11 @@ function isCheckMate()
 				
 				if(x.src.match("w") && piece=="K")
 				{
-				  cbc(tempID,"w")
+				  if(cbc(tempID,"w"))
+				  {
+				    wcheck=true;
+					alert(wcheck);
+				  }
 				  //wpos=tempID;
 				  //alert(wpos);
 				}
@@ -51,7 +61,7 @@ function isCheckMate()
 function cbc(kpos,kcolor)
 {
   
-	alert("heloo");
+	
 	var i=parseInt(kpos.charAt(0));
 	//alert(i);
 	var j=parseInt(kpos.charAt(1));
@@ -78,11 +88,11 @@ function cbc(kpos,kcolor)
 							if(!IsEmpty(tempID))
 			{
 			       var frendCheck=document.getElementById(tempID).getElementsByTagName("img")[0];
-				   //alert("hello");
+				  
 				   //alert(frendCheck);
 				   if(frendCheck.src.match(kcolor))
 				   {
-				         alert("matched");
+				         
 						 
 				   }
 				   else
@@ -95,7 +105,8 @@ function cbc(kpos,kcolor)
 							piece=piece.charAt(8);
 							if(piece=="N")
 							{
-							  alert("checkmate");
+							  alert("Check !!!take care of your KING."); return true;
+							  return true;
 							  
 							}
 						}	
@@ -118,11 +129,11 @@ function cbc(kpos,kcolor)
 			 if(!IsEmpty(tempID))
 			{
 			       var frendCheck=document.getElementById(tempID).getElementsByTagName("img")[0];
-				   //alert("hello");
+				  
 				   //alert(frendCheck);
 				   if(frendCheck.src.match(kcolor))
 				   {
-				        alert("matched");
+				        
 						// break;
 				   }
 				   else
@@ -135,7 +146,8 @@ function cbc(kpos,kcolor)
 							piece=piece.charAt(8);
 							if(piece=="N")
 							{
-							  alert("checkmate");
+							  alert("Check !!!take care of your KING.");
+							  return true;
 							  
 							}
 						}	
@@ -166,11 +178,11 @@ function cbc(kpos,kcolor)
 			 if(!IsEmpty(tempID))
 			{
 			       var frendCheck=document.getElementById(tempID).getElementsByTagName("img")[0];
-				   //alert("hello");
+				  
 				   //alert(frendCheck);
 				   if(frendCheck.src.match(kcolor))
 				   {
-				        alert("matched");
+				        
 						// break;
 				   }
 				   else
@@ -183,7 +195,7 @@ function cbc(kpos,kcolor)
 							piece=piece.charAt(8);
 							if(piece=="N")
 							{
-							  alert("checkmate");
+							  alert("Check !!!take care of your KING."); return true;
 							  
 							}
 						}	
@@ -208,11 +220,11 @@ function cbc(kpos,kcolor)
 			 if(!IsEmpty(tempID))
 			{
 			       var frendCheck=document.getElementById(tempID).getElementsByTagName("img")[0];
-				   //alert("hello");
+				  
 				   //alert(frendCheck);
 				   if(frendCheck.src.match(kcolor))
 				   {
-				        alert("matched");
+				        
 						// break;
 				   }
 				   else
@@ -225,7 +237,7 @@ function cbc(kpos,kcolor)
 							piece=piece.charAt(8);
 							if(piece=="N")
 							{
-							  alert("checkmate");
+							  alert("Check !!!take care of your KING."); return true;
 							  
 							}
 						}	
@@ -256,11 +268,11 @@ function cbc(kpos,kcolor)
 			 if(!IsEmpty(tempID))
 			{
 			       var frendCheck=document.getElementById(tempID).getElementsByTagName("img")[0];
-				   //alert("hello");
+				  
 				   //alert(frendCheck);
 				   if(frendCheck.src.match(kcolor))
 				   {
-				        alert("matched");
+				        
 						// break;
 				   }
 				   else
@@ -273,7 +285,7 @@ function cbc(kpos,kcolor)
 							piece=piece.charAt(8);
 							if(piece=="N")
 							{
-							  alert("checkmate");
+							  alert("Check !!!take care of your KING."); return true;
 							  
 							}
 						}	
@@ -295,11 +307,11 @@ function cbc(kpos,kcolor)
 			 if(!IsEmpty(tempID))
 			{
 			       var frendCheck=document.getElementById(tempID).getElementsByTagName("img")[0];
-				   //alert("hello");
+				  
 				   //alert(frendCheck);
 				   if(frendCheck.src.match(kcolor))
 				   {
-				        alert("matched");
+				        
 						// break;
 				   }
 				   else
@@ -312,7 +324,7 @@ function cbc(kpos,kcolor)
 							piece=piece.charAt(8);
 							if(piece=="N")
 							{
-							  alert("checkmate");
+							  alert("Check !!!take care of your KING."); return true;
 							  
 							}
 						}	
@@ -337,11 +349,11 @@ function cbc(kpos,kcolor)
 			if(!IsEmpty(tempID))
 			{
 			       var frendCheck=document.getElementById(tempID).getElementsByTagName("img")[0];
-				   //alert("hello");
+				  
 				   //alert(frendCheck);
 				   if(frendCheck.src.match(kcolor))
 				   {
-				        // alert("matched");
+				        // 
 						 break;
 				   }
 				   else
@@ -354,7 +366,7 @@ function cbc(kpos,kcolor)
 							piece=piece.charAt(8);
 							if(piece=="R"||	piece=="Q")
 							{
-							  alert("checkmate");
+							  alert("Check !!!take care of your KING."); return true;
 							  
 							}
 						}	
@@ -378,11 +390,11 @@ function cbc(kpos,kcolor)
 			if(!IsEmpty(tempID))
 			{
 			       var frendCheck=document.getElementById(tempID).getElementsByTagName("img")[0];
-				   //alert("hello");
+				  
 				   //alert(frendCheck);
 				   if(frendCheck.src.match(kcolor))
 				   {
-				        // alert("matched");
+				        // 
 						 break;
 				   }
 				   else
@@ -395,7 +407,7 @@ function cbc(kpos,kcolor)
 							piece=piece.charAt(8);
 							if(piece=="R"||	piece=="Q")
 							{
-							  alert("checkmate");
+							  alert("Check !!!take care of your KING."); return true;
 							  
 							}
 						}	
@@ -424,11 +436,11 @@ function cbc(kpos,kcolor)
 			if(!IsEmpty(tempID))
 			{
 			       var frendCheck=document.getElementById(tempID).getElementsByTagName("img")[0];
-				   //alert("hello");
+				  
 				   //alert(frendCheck);
 				   if(frendCheck.src.match(kcolor))
 				   {
-				        alert("matched");
+				        
 						 //break;
 				   }
 				   else
@@ -441,7 +453,7 @@ function cbc(kpos,kcolor)
 							piece=piece.charAt(8);
 							if(piece=="N")
 							{
-							  alert("checkmate");
+							  alert("Check !!!take care of your KING."); return true;
 							  
 							}
 						}	
@@ -462,11 +474,11 @@ function cbc(kpos,kcolor)
 			if(!IsEmpty(tempID))
 			{
 			       var frendCheck=document.getElementById(tempID).getElementsByTagName("img")[0];
-				   //alert("hello");
+				  
 				   //alert(frendCheck);
 				   if(frendCheck.src.match(kcolor))
 				   {
-				         alert("matched");
+				         
 						 //break;
 				   }
 				   else
@@ -479,7 +491,7 @@ function cbc(kpos,kcolor)
 							piece=piece.charAt(8);
 							if(piece=="N")
 							{
-							  alert("checkmate");
+							  alert("Check !!!take care of your KING."); return true;
 							  
 							}
 						}	
@@ -495,16 +507,16 @@ function cbc(kpos,kcolor)
 	
 	
 	for(l=i-1,m=j+1 ; l>=0 && m<=7 ; l--,m++)
-	{   alert("hi frend");
+	{   
 			tempID=""+l+m;
 			if(!IsEmpty(tempID))
 			{
 			       var frendCheck=document.getElementById(tempID).getElementsByTagName("img")[0];
-				   //alert("hello");
+				  
 				   //alert(frendCheck);
 				   if(frendCheck.src.match(kcolor))
 				   {
-				        // alert("matched");
+				        // 
 						 break;
 				   }
 				   else
@@ -517,7 +529,7 @@ function cbc(kpos,kcolor)
 							piece=piece.charAt(8);
 							if(piece=="B"||	piece=="Q")
 							{
-							  alert("checkmate");
+							  alert("Check !!!take care of your KING."); return true;
 							  
 							}
 						}	
@@ -532,11 +544,11 @@ function cbc(kpos,kcolor)
 			if(!IsEmpty(tempID))
 			{
 			       var frendCheck=document.getElementById(tempID).getElementsByTagName("img")[0];
-				   //alert("hello");
+				  
 				   //alert(frendCheck);
 				   if(frendCheck.src.match(kcolor))
 				   {
-				        // alert("matched");
+				        // 
 						 break;
 				   }
 				   else
@@ -549,7 +561,7 @@ function cbc(kpos,kcolor)
 							piece=piece.charAt(8);
 							if(piece=="B"||	piece=="Q")
 							{
-							  alert("checkmate");
+							  alert("Check !!!take care of your KING."); return true;
 							  
 							}
 						}	
@@ -566,11 +578,11 @@ function cbc(kpos,kcolor)
 			if(!IsEmpty(tempID))
 			{
 			       var frendCheck=document.getElementById(tempID).getElementsByTagName("img")[0];
-				   //alert("hello");
+				  
 				   //alert(frendCheck);
 				   if(frendCheck.src.match(kcolor))
 				   {
-				        // alert("matched");
+				        // 
 						 break;
 				   }
 				   else
@@ -583,7 +595,7 @@ function cbc(kpos,kcolor)
 							piece=piece.charAt(8);
 							if(piece=="B"||	piece=="Q")
 							{
-							  alert("checkmate");
+							  alert("Check !!!take care of your KING."); return true;
 							  
 							}
 						}	
@@ -600,11 +612,11 @@ function cbc(kpos,kcolor)
 			if(!IsEmpty(tempID))
 			{
 			       var frendCheck=document.getElementById(tempID).getElementsByTagName("img")[0];
-				   //alert("hello");
+				  
 				   //alert(frendCheck);
 				   if(frendCheck.src.match(kcolor))
 				   {
-				        // alert("matched");
+				        // 
 						 break;
 				   }
 				   else
@@ -617,7 +629,7 @@ function cbc(kpos,kcolor)
 							piece=piece.charAt(8);
 							if(piece=="B"||	piece=="Q")
 							{
-							  alert("checkmate");
+							  alert("Check !!!take care of your KING."); return true;
 							  
 							}
 						}	
