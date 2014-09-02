@@ -29,7 +29,7 @@ function isCheckMate()
 				  if(cbc(tempID,"b"))
 				  {
 				   bcheck=true;
-				   alert(bcheck);
+				   //alert(bcheck);
 				  }
 				  //bpos=tempID;
 				 //alert(bpos);
@@ -43,7 +43,7 @@ function isCheckMate()
 				  if(cbc(tempID,"w"))
 				  {
 				    wcheck=true;
-					alert(wcheck);
+					//alert(wcheck);
 				  }
 				  //wpos=tempID;
 				  //alert(wpos);

@@ -148,7 +148,7 @@ function setHighLight(divid)
 {
 	var temp=document.getElementById(divid);
 	//temp.setAttribute("class","border:green;");
-	temp.setAttribute("style","cursor:pointer;border:3px solid red;");
+	temp.setAttribute("style","cursor:pointer;border:3px solid;");
 	temp.setAttribute("onclick","movePiece(this)");
 }
 
